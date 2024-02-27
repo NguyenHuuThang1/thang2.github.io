@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Thi Trắc Nghiệm Trực Tuyến</title>
+</head>
+<body>
+  <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Logo_PTIT_University.png/200px-Logo_PTIT_University.png" alt="PTIT University Logo">
+
+  <h2>Hệ thống thi trắc nghiệm</h2>
+  <button id="loginButton" onclick="showLoginForm()">Đăng nhập</button>
+  <button id="registerButton" onclick="showRegisterForm()">Đăng ký</button>
+
+  <h2 id="loginTitle" style="display:none;">Đăng nhập</h2>
+  <form id="loginForm" style="display:none;" onsubmit="return validateLoginForm()">
+    <input type="text" id="loginUsername" name="loginUsername" placeholder="Tên đăng nhập" required>
+    <br>
+    <input type="password" id="loginPassword" name="loginPassword" placeholder="Mật khẩu" required>
+    <br>
+    <input type="submit" value="Đăng nhập">
+  </form>
+
+  <h2 id="registerTitle" style="display:none;">Đăng ký mới</h2>
+  <form id="registerForm" style="display:none;" onsubmit="return validateRegisterForm()">
+    <input type="text" id="registerUsername" name="registerUsername" placeholder="Tên người dùng" required>
+    <br>
+    <input type="email" id="registerEmail" name="registerEmail" placeholder="Email" required>
+    <br>
+    <input type="password" id="registerPassword" name="registerPassword" placeholder="Mật khẩu" required>
+    <br>
+    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+    <br>
+    <input type="submit" value="Đăng ký">
+  </form>
+
+  <script>
+    function showLoginForm() {
+      document.getElementById("loginTitle").style.display = "block";
+      document.getElementById("loginForm").style.display = "block";
+      document.getElementById("registerTitle").style.display = "none";
+      document.getElementById("registerForm").style.display = "none";
+      document.getElementById("loginButton").style.display = "none"; // Ẩn nút đăng nhập
+      document.getElementById("registerButton").style.display = "none"; // Ẩn nút đăng ký
+    }
+
+    function showRegisterForm() {
+      document.getElementById("registerTitle").style.display = "block";
+      document.getElementById("registerForm").style.display = "block";
+      document.getElementById("loginTitle").style.display = "none";
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("loginButton").style.display = "none"; // Ẩn nút đăng nhập
+      document.getElementById("registerButton").style.display = "none"; // Ẩn nút đăng ký
+    }
+
+    function validateLoginForm() {
+      // Bạn có thể thêm logic kiểm tra tên đăng nhập và mật khẩu ở đây
+      return true;
+    }
+
+    function validateRegisterForm() {
+      var password = document.getElementById("registerPassword").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      if (password != confirmPassword) {
+        alert("Mật khẩu và xác nhận mật khẩu không khớp!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

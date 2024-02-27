@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Căn giữa nội dung */
+    background-color: #f0f0f0; /* Màu nền */
+    margin: 0; /* Loại bỏ margin */
+    padding: 0; /* Loại bỏ padding */
+  }
+  #logo {
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 20px; /* Cách lề trên 20px */
+    left: 20px; /* Cách lề trái 20px */
+    width: 200px; /* Độ rộng của logo */
+    height: auto; /* Chiều cao tự động tính theo tỉ lệ */
+  }
+  h2 {
+    font-size: 50px; /* Kích thước font 50px */
+  }
+  button {
+    font-size: 18px; /* Kích thước font của nút */
+    padding: 12px 24px; /* Kích thước padding của nút */
+    border-radius: 6px; /* Độ cong của góc nút */
+    cursor: pointer;
+    margin: 10px; /* Khoảng cách giữa các nút */
+  }
+  form {
+    display: none; /* Ẩn form ban đầu */
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px; /* Kích thước padding của nút */
+    border: none;
+    border-radius: 6px; /* Độ cong của góc nút */
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .error {
+    color: red;
+  }
